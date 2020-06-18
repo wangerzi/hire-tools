@@ -1,6 +1,6 @@
 # hire-tools
-A simple project for interview and employ.
-You can use it by [https://wangerzi.github.io/hire-tools/](https://wangerzi.github.io/hire-tools/)
+A simple project for interview.
+You can use it by [https://hire-tools-1252276051.file.myqcloud.com/index.html](https://hire-tools-1252276051.file.myqcloud.com/index.html)
 
 ## Purpose
 For the technology interview, we can view the ability about the candidate.
