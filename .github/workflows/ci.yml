@@ -7,7 +7,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout pages
-          if: success()
           uses: actions/checkout@master
           with:
             ref: gh-pages
