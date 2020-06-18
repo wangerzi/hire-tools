@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@master
         with:
           ref: gh-pages
-        run: git merge master
+      - run: git merge master
       - uses: c-hive/gha-npm-cache@v1
       - name: Install JS dependencies
         run: npm install
