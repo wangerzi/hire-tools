@@ -1,0 +1,29 @@
+name: CI
+
+on: [push]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+
+      - uses: c-hive/gha-npm-cache@v1
+
+      - name: Checkout doc
+          if: success()
+          uses: actions/checkout@master
+          with:
+            ref: gh-pages
+      - name: Install JS dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Deploy to GitHub Pages
+        if: success()
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
