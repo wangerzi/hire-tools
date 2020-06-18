@@ -7,14 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-
-      - uses: c-hive/gha-npm-cache@v1
-
-      - name: Checkout doc
+      - name: Checkout pages
           if: success()
           uses: actions/checkout@master
           with:
             ref: gh-pages
+      - uses: c-hive/gha-npm-cache@v1
       - name: Install JS dependencies
         run: npm install
       - name: Build
