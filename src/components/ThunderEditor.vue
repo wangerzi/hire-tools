@@ -1,29 +1,29 @@
 <template>
-    <Form ref="formDynamic" :model="formDynamic" :label-width="80" style="width: 50rem; margin: 0 auto;">
-        <FormItem label="姓名">
-            <Input type="text" v-model="formDynamic.name" placeholder="name" />
+    <Form ref="formDynamic" :model="formDynamic" :label-width="100" style="width: 50rem; margin: 0 auto;">
+        <FormItem label="name">
+            <Input type="text" v-model="formDynamic.name" placeholder="interviewee" />
         </FormItem>
-        <FormItem label="权值模板">
+        <FormItem label="template">
             <Select v-model="currentGroupIndex">
-                <Option v-for="(item, index) in DEFAULT_ITEMS_GROUP" :key="item.label" :value="index">{{item.label}}</Option>
+                <Option v-for="(item, index) in allGroups" :key="item.label" :value="index">{{item.label}}({{item.type}})</Option>
             </Select>
         </FormItem>
         <FormItem>
             <Row :gutter="16">
                 <i-col span="5">
-                    标题
+                    title
                 </i-col>
                 <i-col span="5">
-                    分数
+                    score
                 </i-col>
                 <i-col span="5">
-                    总分
+                    total
                 </i-col>
                 <i-col span="5">
-                    权重
+                    weight
                 </i-col>
                 <i-col span="3" offset="1">
-                    操作
+                    operation
                 </i-col>
             </Row>
         </FormItem>
@@ -63,23 +63,26 @@
         <FormItem>
             <Button type="primary" @click="handleSubmit('formDynamic')">Submit</Button>
             <Button @click="handleReset()" style="margin-left: 8px">Reset</Button>
+            <Button type="info" @click="handleSaveTemplate('formDynamic')" style="margin-left: 8px">Save As</Button>
         </FormItem>
     </Form>
 </template>
 <script>
     const DEFAULT_ITEMS_GROUP = [
         {
-            label: '后端',
+            label: 'backend',
+            type: 'inner',
+            status: 1,
             items: [
                 {
                     title: '学习能力',
-                    total: '40',
+                    total: '30',
                     score: '0',
                     weight: '7',
                     status: 1
                 },
                 {
-                    title: '方案产出能力',
+                    title: '方案产出',
                     total: '50',
                     score: '0',
                     weight: '9',
@@ -100,7 +103,7 @@
                     status: 1
                 },
                 {
-                    title: '锦上添花的能力',
+                    title: '锦上添花',
                     total: '10',
                     score: '0',
                     weight: '6',
@@ -109,17 +112,40 @@
             ]
         }
     ];
+    let LOCAL_ITEMS_GROUP = JSON.parse(localStorage.getItem('thunder-editor-customize-group'));
+    LOCAL_ITEMS_GROUP = LOCAL_ITEMS_GROUP ? LOCAL_ITEMS_GROUP : [];
     export default {
         name: 'ThunderEditor',
         data() {
             return {
                 formDynamic: {
-                    name: '面试人',
+                    name: '',
                     items: []
                 },
                 currentGroupIndex: 0,
                 DEFAULT_ITEMS_GROUP,
+                LOCAL_ITEMS_GROUP,
+                editLabel: '',
             }
+        },
+        computed: {
+            allGroups() {
+                let data = [];
+                if (this.LOCAL_ITEMS_GROUP) {
+                    data = this.DEFAULT_ITEMS_GROUP.concat(this.LOCAL_ITEMS_GROUP)
+                } else {
+                    data = this.DEFAULT_ITEMS_GROUP;
+                }
+
+                return data.filter(v => v.status)
+            },
+            allGroupsMap() {
+                let obj = {};
+                for (const item of this.allGroups) {
+                    obj[item.label] = item
+                }
+                return obj;
+            },
         },
         watch: {
             currentGroupIndex: {
@@ -146,9 +172,44 @@
                 })
                 this.$emit('submit', submitData);
             },
+            handleSaveTemplate() {
+                const submitData = {...this.formDynamic};
+                submitData.items = submitData.items.filter(v => v.status)
+
+                this.$Modal.confirm({
+                    render: (h) => {
+                        return h('Input', {
+                            props: {
+                                value: this.editLabel,
+                                autofocus: true,
+                                placeholder: 'Please enter label name...'
+                            },
+                            on: {
+                                input: (val) => {
+                                    this.editLabel = val;
+                                }
+                            }
+                        })
+                    },
+                    onOk: () => {
+                        this.LOCAL_ITEMS_GROUP.push({
+                            label: this.editLabel,
+                            type: 'local',
+                            status: 1,
+                            items: submitData.items.map((v) => {
+                                const val = {...v};
+                                val.score = '0';
+                                return val;
+                            }),
+                        });
+                        localStorage.setItem('thunder-editor-customize-group', JSON.stringify(this.LOCAL_ITEMS_GROUP));
+                        this.editLabel = '';
+                    }
+                })
+            },
             handleReset() {
                 // this.formDynamic.items = this.DEFAULT_ITEMS_GROUP[this.currentGroupIndex].items.slice(0)
-                this.$set(this.formDynamic, 'items', this.DEFAULT_ITEMS_GROUP[this.currentGroupIndex].items.map(v => {return {...v}}))
+                this.$set(this.formDynamic, 'items', this.allGroups[this.currentGroupIndex].items.map(v => {return {...v}}))
             },
             handleAdd() {
                 this.formDynamic.items.push({

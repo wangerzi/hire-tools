@@ -18,7 +18,7 @@
         },
         computed: {
             title() {
-                return '满分：' + 100 +'，得分：' + (this.sumScore / this.sumTotal * 100).toFixed(2);
+                return 'total:' + 100 +'，score:' + (this.sumScore / this.sumTotal * 100).toFixed(2);
             },
             indicator() {
                 if (!this.formData) {
@@ -34,7 +34,7 @@
                 return data;
             },
             legendData() {
-                return [this.formData.name, '60%标准线'];
+                return [this.formData.name, '60% standard'];
             },
             sumTotal() {
                 let score = 0;
@@ -68,7 +68,7 @@
                         },
                         {
                             value: data60,
-                            name: '60%标准线',
+                            name: '60% standard',
                         }
                     ]
                 }];
