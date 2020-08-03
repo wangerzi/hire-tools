@@ -1,16 +1,12 @@
 <template>
   <div id="app">
-      <thunder></thunder>
+      <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import Thunder from "./pages/Thunder";
   export default {
-    name: 'App',
-    components: {
-      Thunder
-    }
+    name: 'App'
   }
 </script>
 

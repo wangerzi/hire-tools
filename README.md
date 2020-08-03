@@ -11,8 +11,11 @@ For the technology interview, we can view the ability about the candidate.
 - [x] Save customize template
 - [ ] Manage customize template
 - [ ] Record interview comment online.
+- [ ] Question record and copy to use.
 
 ## Operation
+
+### Radar chart
 At first, you can edit the categoary, score, total score and the weights, on this page, and you can save this as a local template (only this browser).
 
 ![image-20200624114042249](image-20200624114042249.png)
