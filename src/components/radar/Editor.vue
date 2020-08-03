@@ -115,7 +115,7 @@
     let LOCAL_ITEMS_GROUP = JSON.parse(localStorage.getItem('thunder-editor-customize-group'));
     LOCAL_ITEMS_GROUP = LOCAL_ITEMS_GROUP ? LOCAL_ITEMS_GROUP : [];
     export default {
-        name: 'ThunderEditor',
+        name: 'RadarEditor',
         data() {
             return {
                 formDynamic: {

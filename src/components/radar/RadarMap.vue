@@ -8,7 +8,7 @@
     const echarts = require('echarts');
 
     export default {
-        name: "ThunderMap",
+        name: "RadarMap",
         props: {
             title: {
                 type: String,

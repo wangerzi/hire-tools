@@ -8,10 +8,10 @@
 </template>
 
 <script>
-    import ThunderMap from "../components/thunder/RadarMap";
-    import ThunderEditor from "../components/thunder/Editor";
+    import ThunderMap from "../components/radar/RadarMap";
+    import ThunderEditor from "../components/radar/Editor";
     export default {
-        name: 'Thunder',
+        name: 'Radar',
         components: {
             ThunderMap,
             ThunderEditor,
