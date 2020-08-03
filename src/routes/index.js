@@ -19,7 +19,7 @@ const menus = [
     },
     {
         "name": "question",
-        "label": "Questions",
+        "label": "Pre-Check Questions",
         "icon": "ios-checkmark-circle-outline"
     }
 ];

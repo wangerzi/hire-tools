@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <Layout>
-            <Sider ref="side1" hide-trigger collapsible :collapsed-width="78" v-model="isCollapsed">
+            <Sider ref="side1" hide-trigger collapsible :collapsed-width="78" :width="220" v-model="isCollapsed">
                 <Menu :active-name="activeName" theme="dark" width="auto" :class="menuitemClasses" @on-select="handleMenuItemClick">
                     <MenuItem :name="item.name" v-for="item of menus" :key="item.name">
                         <Icon :type="item.icon"></Icon>
