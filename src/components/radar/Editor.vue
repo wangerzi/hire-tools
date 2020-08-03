@@ -1,7 +1,7 @@
 <template>
     <Form ref="formDynamic" :model="formDynamic" :label-width="100" style="width: 50rem; margin: 0 auto;">
         <FormItem label="name">
-            <Input type="text" v-model="formDynamic.name" placeholder="interviewee" />
+            <Input type="text" v-model="formDynamic.name" placeholder="interviewer" />
         </FormItem>
         <FormItem label="template">
             <Select v-model="currentGroupIndex">
@@ -60,10 +60,12 @@
                 </i-col>
             </Row>
         </FormItem>
-        <FormItem>
-            <Button type="primary" @click="handleSubmit('formDynamic')">Submit</Button>
-            <Button @click="handleReset()" style="margin-left: 8px">Reset</Button>
-            <Button type="info" @click="handleSaveTemplate('formDynamic')" style="margin-left: 8px">Save As</Button>
+        <FormItem style="text-align: center;">
+            <i-col span="20">
+                <Button type="primary" @click="handleSubmit('formDynamic')">Submit</Button>
+                <Button @click="handleReset()" style="margin-left: 8px">Reset</Button>
+                <Button type="info" @click="handleSaveTemplate('formDynamic')" style="margin-left: 8px">Save As</Button>
+            </i-col>
         </FormItem>
     </Form>
 </template>
@@ -119,7 +121,7 @@
         data() {
             return {
                 formDynamic: {
-                    name: '',
+                    name: 'Interviewer A',
                     items: []
                 },
                 currentGroupIndex: 0,
