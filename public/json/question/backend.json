@@ -1,0 +1,60 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "label": "3年以上考察题目",
+      "list": [
+        {
+          "title": "【PHP】在一个框架中比较重要的模块是路由，根据你的经验你会怎么实现 `http://example.com/user/index/create` 这种形式的路由解析。",
+          "reference": ""
+        },
+        {
+          "title": "【架构】如果需要给全球各个地区提供稳定的文件上传服务，有什么思路，提示：云服务、CDN。",
+          "reference": ""
+        },
+        {
+          "title": "【REDIS】请结合自己的理解简述Redis的LRU机制和持久化机制",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "公共考察题目",
+      "list": [
+        {
+          "title": "【PHP】请简述 PHP-FPM 的工作机制。",
+          "reference": ""
+        },
+        {
+          "title": "【CDN】请结合自己的理解简述 CDN 的实现原理、优缺点以及适用范围。",
+          "reference": ""
+        },
+        {
+          "title": "【架构】从传统的LNMP出发，你能想到什么办法提高服务稳定性、提升访问速度。",
+          "reference": ""
+        },
+        {
+          "title": "【REDIS】假如有一套社区系统，每次访问帖子详情需要消耗大量的资源，如何设计缓存能有效提高热门帖子的访问速度。",
+          "reference": ""
+        },
+        {
+          "title": "【Linux】如果你发现一台Linux服务器非常的卡，网页访问不了，SSH连接上去巨慢，请问你的问题排查思路是什么。",
+          "reference": ""
+        },
+        {
+          "title": "【MYSQL】请解释如下 SQL 的含义，并阐述如果这个SQL查询很慢，你会怎么分析并解决这个问题。\nselect count(*) as total, platform, event_name from callback_event GROUP BY platform, event_name ORDER BY platform, total DESC LIMIT 10;",
+          "reference": ""
+        },
+        {
+          "title": "【自我提升】如果让你接触一个新项目 or 新技术，你会怎样快速上手解决问题？",
+          "reference": ""
+        },
+        {
+          "title": "【自我提升】介绍下自己最近半年学到的新技术",
+          "reference": ""
+        }
+      ]
+    }
+  ]
+}

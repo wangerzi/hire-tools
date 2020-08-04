@@ -73,9 +73,11 @@
                                 props: {
                                     type: 'textarea'
                                 },
+                                style: "margin: 10px 0;",
                                 on: {
                                     'on-blur': (event) => {
                                         this.question[params.index].answer = event.target.value;
+                                        this.$emit('select-change', this.selected.length);
                                     }
                                 }
                             }, params.row.answer);
