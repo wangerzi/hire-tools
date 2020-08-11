@@ -52,3 +52,4 @@ npm run lint
 ## LICENCE
 
 Hire-tools is licensed under the MIT License. See [LICENSE](https://github.com/GitbookIO/gitbook/blob/master/LICENSE) for the full license text.
+
