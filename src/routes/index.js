@@ -15,7 +15,7 @@ const menus = [
     {
         "name": "radar",
         "label": "Radar Map",
-        "icon": "ios-clipboard-outline"
+        "icon": "ios-aperture-outline"
     },
     {
         "name": "question",

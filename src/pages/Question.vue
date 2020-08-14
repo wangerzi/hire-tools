@@ -16,15 +16,14 @@
             </FormItem>
             <FormItem label="Description" v-if="currentJobInfo">
                 <p>{{currentJobInfo.desc}}</p>
+                <random-modal ref="random-modal" :init-rule="currentJobInfo.random" :question-list="questionList"></random-modal>
             </FormItem>
         </i-form>
         <template v-if="questionList.length">
             <list-card ref="list-card" v-for="item of questionList" :key="item.label" :list="item.list"
                        :label="item.label" @select-change="handleSelectChange"></list-card>
         </template>
-        <copy-form v-if="selectedNum" :copy-content="copyContent" :selected-num="selectedNum"></copy-form>
-
-        <random-modal ref="random-modal"></random-modal>
+        <copy-form v-if="selectedNum" :copy-items="selectedItems"></copy-form>
     </div>
 </template>
 
@@ -51,9 +50,6 @@
       }
     },
     computed: {
-      copyContent() {
-        return this.getCopyContents(this.selectedItems)
-      },
       currentJobInfo() {
         let jobInfo = null;
         if (this.condition.job) {
@@ -73,18 +69,6 @@
           items = [].concat(items, this.$refs['list-card'][i].getSelectedItems());
         }
         return items;
-      },
-      getCopyContents(items) {
-        let content = '';
-        for (let i = 0; i < items.length; i++) {
-          const item = items[i];
-          content += ("Q" + (i + 1) + '. ' + item['title'] + "\n");
-          if (item['answer']) {
-            content += ("A: " + item['answer'] + "\n")
-          }
-          content += "\n";
-        }
-        return content;
       },
       handleSelectChange() {
         this.selectedItems = this.getSelectedItems();
