@@ -9,7 +9,7 @@
       "random": {
         "min": 4,
         "max": 6,
-        "min_section": 1,
+        "min_section": 0,
         "max_section": 2
       }
     },
@@ -20,7 +20,7 @@
       "random": {
         "min": 4,
         "max": 6,
-        "min_section": 1,
+        "min_section": 0,
         "max_section": 2
       }
     }

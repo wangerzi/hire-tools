@@ -1,8 +1,8 @@
 <template>
     <i-form style="margin-top: 30px;">
         <FormItem label="Preview">
-            <Input :value="copyContent" type="textarea" :autosize="true" readonly placeholder="Copy Content"/>
-            <p>{{this.selectedNum}} question{{this.selectedNum>1?'s':''}} selected!</p>
+            <Input :value="content" type="textarea" :autosize="false" readonly placeholder="Copy Content" :rows="12"/>
+            <p>{{this.nums}} question{{this.nums>1?'s':''}} selected!</p>
         </FormItem>
         <FormItem label="">
             <Button

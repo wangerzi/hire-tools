@@ -11,8 +11,7 @@
                         type="primary"
                         style="margin-left: 20px"
                         @click="handleRandomButton"
-                >随机抽题
-                </Button>
+                >Random</Button>
             </FormItem>
             <FormItem label="Description" v-if="currentJobInfo">
                 <p>{{currentJobInfo.desc}}</p>
