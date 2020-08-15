@@ -13,6 +13,7 @@ For the technology interview, we can view the ability about the candidate, and H
 - [ ] Record interview comment online.
 - [x] Question record and copy to use.
 - [x] Random questions quickly
+- [ ] Automatic publish project by docker image.
 
 ## Operation
 
