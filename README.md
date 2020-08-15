@@ -1,6 +1,6 @@
 # hire-tools
 A simple hire tools for interview, contains radar charts, pre check questions select, etc.
-You can use it by open this url: [https://hire-tools-1252276051.file.myqcloud.com/index.html](https://hire-tools-1252276051.file.myqcloud.com/index.html)
+You can use it by open this url: [http://hire-tools.wj2015.com/index.html](http://hire-tools.wj2015.com/index.html)
 
 ## Purpose
 For the technology interview, we can view the ability about the candidate, and HR always choose some questions from question bank and let the interviewee answer it.
@@ -12,6 +12,7 @@ For the technology interview, we can view the ability about the candidate, and H
 - [ ] Manage customize template
 - [ ] Record interview comment online.
 - [x] Question record and copy to use.
+- [x] Random questions quickly
 
 ## Operation
 

@@ -13,6 +13,9 @@
                 <Header :style="{padding: 0}" class="layout-header-bar">
                     <Icon @click.native="collapsedSlider" :class="rotateIcon" :style="{margin: '0 20px'}" type="md-menu" size="24"></Icon>
                     {{activeLabel}}
+                    <a href="https://github.com/wangerzi/hire-tools" target="_blank" class="github-link">
+                        <Icon type="logo-github" /> Fork me on GitHub
+                    </a>
                 </Header>
                 <Content :style="{margin: '20px', padding: '20px', background: '#fff', minHeight: 'calc(87vh)'}">
                     <router-view></router-view>
@@ -75,7 +78,7 @@
     }
 </script>
 
-<style scoped>
+<style lang="less" scoped>
     .layout{
         border: 1px solid #d7dde4;
         background: #f5f7f9;
@@ -86,6 +89,11 @@
     .layout-header-bar{
         background: #fff;
         box-shadow: 0 1px 1px rgba(0,0,0,.1);
+
+        a.github-link {
+            float: right;
+            padding-right: 20px;
+        }
     }
     .layout-logo-left{
         width: 90%;
