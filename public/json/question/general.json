@@ -23,6 +23,28 @@
         "min_section": 0,
         "max_section": 2
       }
+    },
+    {
+      "label": "初级PHP+运维",
+      "name": "backend-primary",
+      "desc": "大部分时间是运维相关的工作，所以需要熟悉 Linux，熟悉常见运维组件的维护",
+      "random": {
+        "min": 4,
+        "max": 6,
+        "min_section": 0,
+        "max_section": 2
+      }
+    },
+    {
+      "label": "高级PHP",
+      "name": "backend-advanced",
+      "desc": "需要攻克难关，所以出了一些边边角角的题目",
+      "random": {
+        "min": 4,
+        "max": 6,
+        "min_section": 0,
+        "max_section": 2
+      }
     }
   ]
 }

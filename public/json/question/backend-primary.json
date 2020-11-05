@@ -1,0 +1,57 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "label": "PHP",
+      "list": [
+        {
+          "title": "【PHP】请简述 PHP-FPM 的工作机制。",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "运维",
+      "list": [
+        {
+          "title": "【运维】请结合自己的理解简述 CDN 的工作机制、优缺点以及适用范围。",
+          "reference": ""
+        },
+        {
+          "title": "【运维】请结合自己的理解简述负载均衡器的作用和原理。",
+          "reference": ""
+        },
+        {
+          "title": "【Linux】如果你发现一台Linux服务器非常的卡，网页访问不了，SSH连接上去巨慢，请问你的问题排查思路是什么。",
+          "reference": ""
+        },
+        {
+          "title": "【Linux】如果目前有20台机器，每台机器上有多套 LNMP 结构的系统，你会怎样收集 NGINX 的日志并监控其运行状态。",
+          "reference": ""
+        },
+        {
+          "title": "【Linux】有什么思路可以分组统计如下日志文件中的路径访问次数\n172.18.0.6 - - [12/Oct/2020:09:23:49 +0000] \"GET / HTTP/1.0\" 404 82153 \"-\" \"Mozilla/5.0 (Windows; U; Windows NT 6.0;en-US; rv:1.9.2) Gecko/20100115 Firefox/3.6)\"\n172.18.0.6 - - [12/Oct/2020:09:26:07 +0000] \"POST /uniform/api/bodysegment/bin HTTP/1.0\" 200 9308 \"-\" \"okhttp/3.12.12\"",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "综合问题",
+      "list": [
+        {
+          "title": "【架构】从传统的LNMP出发，你能想到什么办法提高服务稳定性、提升访问速度。",
+          "reference": ""
+        },
+        {
+          "title": "【自我提升】如果让你接触一个新项目 or 新技术，你会怎样快速上手解决问题？",
+          "reference": ""
+        },
+        {
+          "title": "【自我提升】介绍下自己最近半年学到的新技术",
+          "reference": ""
+        }
+      ]
+    }
+  ]
+}

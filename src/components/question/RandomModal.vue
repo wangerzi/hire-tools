@@ -100,6 +100,8 @@
           // 4. if need < total_list, get need questions from total_list
           if (need < totalList.length) {
             result.push.apply(result, totalList.splice(0, need))
+          } else {
+            result.push.apply(result, totalList);
           }
         }
         // 5. merge all the questions, num = result.length;

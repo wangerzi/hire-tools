@@ -2,7 +2,7 @@ export function getRandomNum(min, max) {
   return min + Math.round(Math.random() * (max - min));
 }
 
-export function getShuffleIndexList(start = 0, end = 10) {
+export function getShuffleIndexList(start = 0, end = 10, need = 2) {
   let list = [];
   if (start >= end) {
     return [];
@@ -13,11 +13,13 @@ export function getShuffleIndexList(start = 0, end = 10) {
 
   // shuffle
   let result = [];
-  while (list.length) {
+  let last = need;
+  while (list.length && last > 0) {
     let index = getRandomNum(0, list.length - 1)
     const temp = list.splice(0, index)
     result.push(list.shift());
     list = temp.concat(list);
+    last--;
   }
 
   return result;
@@ -34,8 +36,7 @@ export function getRandomListItems(list, need) {
   if (list.length < need) {
     return list;
   }
-  let shuffle = getShuffleIndexList(0, need - 1);
-
+  let shuffle = getShuffleIndexList(0, list.length - 1, need);
 
   let result = [];
   for (let i = 0; i < shuffle.length; i++) {

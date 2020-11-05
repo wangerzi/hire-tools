@@ -1,0 +1,61 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "label": "PHP",
+      "list": [
+        {
+          "title": "【PHP】在一个框架中比较重要的模块是路由，根据你的经验你会怎么实现 `http://example.com/user/index/create` 这种形式的路由解析。",
+          "reference": ""
+        },
+        {
+          "title": "【PHP】根据你的了解，有哪些方式可以提升 PHP 程序的运行效率",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "常用中间件",
+      "list": [
+        {
+          "title": "【REDIS】请结合自己的理解简述 Redis 的 LRU 机制",
+          "reference": ""
+        },
+        {
+          "title": "【REDIS】请结合自己的理解简述 Redis 两种持久化机制的区别",
+          "reference": ""
+        },
+        {
+          "title": "【REDIS】你会如何查找并清理 Redis 中由于业务逻辑不合理产生的垃圾数据",
+          "reference": ""
+        },
+        {
+          "title": "【MySQL】遇到慢查询语句，你的排查思路是什么",
+          "reference": ""
+        },
+        {
+          "title": "【MYSQL】请根据自己的理解简述事务四个隔离级别之间的区别",
+          "reference": ""
+        },
+        {
+          "title": "【ES】如果遇到某个业务索引体积特别大，会对性能造成什么样的影响，你会怎样从根源上解决它",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "架构设计",
+      "list": [
+        {
+          "title": "【架构】假如有一套社区系统，每次访问帖子详情需要消耗大量的资源，如何设计缓存能有效提高热门帖子的访问速度",
+          "reference": ""
+        },
+        {
+          "title": "【架构】如果需要给全球各个地区提供稳定的文件上传服务，有什么思路",
+          "reference": ""
+        }
+      ]
+    }
+  ]
+}
