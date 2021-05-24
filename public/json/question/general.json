@@ -3,12 +3,12 @@
   "message": "",
   "data": [
     {
-      "label": "运维工程师",
-      "name": "operation",
-      "desc": "从其中随机抽取4-6道题，20分钟内完成即可，由于Linux实操部分的题目相对较难，建议抽一个",
+      "label": "初级后端工程师（应届或一年内）",
+      "name": "backend-beginner",
+      "desc": "抽取 3~5 题测试即可，注重基础和思考能力",
       "random": {
-        "min": 4,
-        "max": 6,
+        "min": 3,
+        "max": 5,
         "min_section": 0,
         "max_section": 2
       }
@@ -39,6 +39,17 @@
       "label": "高级PHP",
       "name": "backend-advanced",
       "desc": "需要攻克难关，所以出了一些边边角角的题目",
+      "random": {
+        "min": 4,
+        "max": 6,
+        "min_section": 0,
+        "max_section": 2
+      }
+    },
+    {
+      "label": "运维工程师",
+      "name": "operation",
+      "desc": "从其中随机抽取4-6道题，20分钟内完成即可，由于Linux实操部分的题目相对较难，建议抽一个",
       "random": {
         "min": 4,
         "max": 6,

@@ -1,0 +1,52 @@
+{
+  "code": 0,
+  "message": "",
+  "data": [
+    {
+      "label": "数据结构",
+      "list": [
+        {
+          "title": "【数据结构】你对队列是怎么理解的，有几种实现方式，各有什么优缺点？",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "网络基础",
+      "list": [
+        {
+          "title": "【HTTP】请用自己的语言简述使用浏览器与 http 服务器通讯的过程。",
+          "reference": ""
+        },
+        {
+          "title": "【CDN】请结合自己的理解简述 CDN 的实现原理、优缺点以及适用范围。",
+          "reference": ""
+        }
+      ]
+    },
+    {
+      "label": "后端公共服务",
+      "list": [
+        {
+          "title": "【MYSQL】你会怎样用 MYSQL 存储树形结构，比如权限树。",
+          "reference": ""
+        },
+        {
+          "title": "【LINUX】平时调试程序会有查日志的习惯么，如果在 Linux 上存有大量的文本日志，你会怎样高效的定位问题？",
+          "reference": ""
+        },
+        {
+          "title": "【REDIS】在实际业务/自己的项目中，你会在什么场景下使用 redis，它有什么优缺点？",
+          "reference": ""
+        },
+        {
+          "title": "【MYSQL】对索引有什么理解，为什么会有最左匹配原则？"
+        },
+        {
+          "title": "【MYSQL】请解释如下 SQL 的含义，并阐述如果这个SQL查询很慢，你会怎么分析并解决这个问题。\nselect count(*) as total, platform, event_name from callback_event GROUP BY platform, event_name ORDER BY platform, total DESC LIMIT 10;",
+          "reference": ""
+        }
+      ]
+    }
+  ]
+}
